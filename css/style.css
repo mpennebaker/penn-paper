@@ -1,0 +1,488 @@
+/* ==========================================
+   DESIGN TOKENS
+   ========================================== */
+:root {
+  --bg:             #FAFAF7;
+  --surface:        #FFFFFF;
+  --text-primary:   #111111;
+  --text-secondary: #666660;
+  --accent:         #16A34A;
+  --accent-dark:    #14401E;
+  --border:         #E5E5E0;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'Space Mono', monospace;
+
+  --radius:     12px;
+  --radius-sm:   6px;
+  --max-width: 1100px;
+  --section-pad: 88px;
+}
+
+/* ==========================================
+   RESET & BASE
+   ========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==========================================
+   LAYOUT
+   ========================================== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-pad) 0;
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 250, 247, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* ==========================================
+   LOGO
+   ========================================== */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.logo:hover {
+  opacity: 0.75;
+}
+
+.logo svg {
+  display: block;
+}
+
+/* ==========================================
+   NAV
+   ========================================== */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav__link {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+  transition: color 0.18s;
+}
+
+.nav__link:hover {
+  color: var(--text-primary);
+}
+
+/* ==========================================
+   HERO
+   ========================================== */
+.hero {
+  position: relative;
+  padding: 112px 0 96px;
+  overflow: hidden;
+}
+
+.hero__dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, #cac9c0 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Fade dots toward bottom */
+.hero__dots::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, var(--bg) 100%);
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__content {
+  max-width: 660px;
+}
+
+.hero__headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+
+.hero__sub {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 460px;
+}
+
+/* ==========================================
+   BUTTON
+   ========================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.925rem;
+  padding: 13px 26px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.01em;
+  transition: background 0.18s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.btn__arrow {
+  display: inline-block;
+  transition: transform 0.18s;
+}
+
+.btn:hover .btn__arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================
+   SECTION HEADING
+   ========================================== */
+.section__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 48px;
+}
+
+/* ==========================================
+   GAMES SECTION
+   ========================================== */
+.games {
+  background: var(--bg);
+}
+
+.games__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 680px) {
+  .games__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   GAME CARD
+   ========================================== */
+.game-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07);
+}
+
+/* ---- Placeholder art ---- */
+.game-card__art {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pixel Puzzle: dark grid with subtle green lines */
+.game-card__art--pixel {
+  background-color: #15152a;
+  background-image:
+    linear-gradient(rgba(22, 163, 74, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 163, 74, 0.18) 1px, transparent 1px),
+    linear-gradient(rgba(100, 100, 180, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 100, 180, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px, 8px 8px, 8px 8px;
+}
+
+/* Small highlight squares scattered in the pixel grid */
+.game-card__art--pixel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 30% 60%, rgba(22, 163, 74, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 70% 30%, rgba(100, 120, 255, 0.1) 0%, transparent 60%);
+}
+
+/* Pinball Survivor: dark with glowing orb */
+.game-card__art--pinball {
+  background-color: #0c0c1a;
+  background-image:
+    radial-gradient(ellipse 70% 70% at 50% 50%, rgba(22, 163, 74, 0.3) 0%, rgba(22, 163, 74, 0.08) 45%, transparent 70%),
+    radial-gradient(circle at 50% 50%, rgba(255, 210, 120, 0.08) 0%, transparent 50%);
+}
+
+.game-card__art--pinball::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 200, 80, 0.55) 0%, rgba(22, 163, 74, 0.4) 50%, transparent 80%);
+  box-shadow: 0 0 32px 12px rgba(22, 163, 74, 0.25);
+}
+
+/* ---- Card body ---- */
+.game-card__body {
+  padding: 22px 24px 24px;
+}
+
+.game-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.game-card__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.game-card__desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+/* ==========================================
+   BADGE
+   ========================================== */
+.badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(22, 163, 74, 0.1);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+/* ==========================================
+   TAGS
+   ========================================== */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tag {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px 11px;
+  border-radius: 100px;
+  letter-spacing: 0.01em;
+}
+
+/* ==========================================
+   ABOUT SECTION
+   ========================================== */
+.about {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.about__inner {
+  max-width: 700px;
+}
+
+.about__body {
+  font-size: 1.075rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 56px;
+}
+
+/* ==========================================
+   STATS STRIP
+   ========================================== */
+.stats {
+  display: flex;
+  gap: 56px;
+}
+
+@media (max-width: 480px) {
+  .stats {
+    gap: 36px;
+  }
+}
+
+.stat__num {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.4rem;
+  letter-spacing: -0.04em;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.stat__label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+  padding: 40px 0;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer__links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__link {
+  font-size: 0.855rem;
+  color: var(--text-secondary);
+  transition: color 0.18s;
+}
+
+.footer__link:hover {
+  color: var(--text-primary);
+}
+
+.footer__copy {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* ==========================================
+   SCROLL FADE-IN
+   ========================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================
+   RESPONSIVE TWEAKS
+   ========================================== */
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 0 72px;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

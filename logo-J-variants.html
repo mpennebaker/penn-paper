@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concept J Variants — penn &amp; paper games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:      #FAFAF7;
+      --surface: #FFFFFF;
+      --text:    #111111;
+      --muted:   #666660;
+      --border:  #E5E5E0;
+      --dark:    #111111;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      padding: 56px 24px 80px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page-header { max-width: 760px; margin: 0 auto 52px; }
+    .page-header h1 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: -0.025em; margin-bottom: 10px; }
+    .page-header p  { color: var(--muted); font-size: 0.95rem; line-height: 1.65; max-width: 540px; }
+    .concepts { max-width: 760px; margin: 0 auto; display: grid; gap: 20px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .card__previews { display: grid; grid-template-columns: 1fr 1fr; }
+    .preview {
+      display: flex; align-items: center; justify-content: center;
+      padding: 40px 32px; min-height: 160px;
+    }
+    .preview + .preview { border-left: 1px solid var(--border); }
+    .preview--light { background: var(--bg); }
+    .preview--dark  { background: var(--dark); }
+    .card__info {
+      padding: 16px 24px 18px; border-top: 1px solid var(--border);
+      display: flex; align-items: baseline; gap: 14px;
+    }
+    .card__letter { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+    .card__name   { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.85rem; margin-right: 4px; }
+    .card__desc   { font-size: 0.855rem; color: var(--muted); }
+    .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; position: relative; top: -1px; }
+  </style>
+</head>
+<body>
+
+<header class="page-header">
+  <h1>Concept J — Nib Variants</h1>
+  <p>Four nib proportions × four real fountain pen ink palettes. The nib shape gets progressively narrower top-to-bottom. All use the same underline mechanic — nib tip drops into an ink line that runs beneath the full wordmark.</p>
+</header>
+
+<div class="concepts">
+
+
+  <!-- =====================================================
+       J1 — NARROW NIB  ·  INK NAVY BLUE
+       Shoulder width: 20px. Ink: deep navy.
+  ====================================================== -->
+  <div class="card">
+    <div class="card__previews">
+
+      <div class="preview preview--light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 88" width="216" height="88">
+          <!-- Nib: shoulder 20px wide, centred at x=20 -->
+          <path d="M 10,14 L 14,3 L 26,3 L 30,14 L 20,60 Z" fill="#1B2A4A"/>
+          <!-- Slit -->
+          <line x1="20" y1="8"  x2="20" y2="54" stroke="#FAFAF7" stroke-width="1.2" stroke-linecap="round"/>
+          <!-- Vent hole -->
+          <circle cx="20" cy="24" r="3" fill="#FAFAF7"/>
+          <!-- Ink drop at tip -->
+          <circle cx="20" cy="58" r="2.5" fill="#2563EB"/>
+          <!-- Vertical ink line: tip down to underline -->
+          <line x1="20" y1="61" x2="20" y2="68" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+          <!-- Horizontal underline -->
+          <line x1="20" y1="68" x2="208" y2="68" stroke="#2563EB" stroke-width="2"/>
+          <!-- Wordmark -->
+          <text y="62" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="20" fill="#1B2A4A" letter-spacing="-0.5">
+            <tspan x="42">penn </tspan><tspan fill="#2563EB">&amp;</tspan><tspan fill="#1B2A4A"> paper</tspan>
+          </text>
+          <!-- GAMES — fixed: larger, #666, less letter-spacing -->
+          <text x="43" y="82" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="11" fill="#666666" letter-spacing="2">GAMES</text>
+        </svg>
+      </div>
+
+      <div class="preview preview--dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 88" width="216" height="88">
+          <path d="M 10,14 L 14,3 L 26,3 L 30,14 L 20,60 Z" fill="#DDEEFF"/>
+          <line x1="20" y1="8"  x2="20" y2="54" stroke="#1B2A4A" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="20" cy="24" r="3" fill="#1B2A4A"/>
+          <circle cx="20" cy="58" r="2.5" fill="#60A5FA"/>
+          <line x1="20" y1="61" x2="20" y2="68" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="68" x2="208" y2="68" stroke="#60A5FA" stroke-width="2"/>
+          <text y="62" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="20" fill="#FFFFFF" letter-spacing="-0.5">
+            <tspan x="42">penn </tspan><tspan fill="#60A5FA">&amp;</tspan><tspan fill="#FFFFFF"> paper</tspan>
+          </text>
+          <text x="43" y="82" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="11" fill="#AAAAAA" letter-spacing="2">GAMES</text>
+        </svg>
+      </div>
+
+    </div>
+    <div class="card__info">
+      <span class="card__letter" style="color:#2563EB;">J1</span>
+      <span>
+        <span class="card__name"><span class="swatch" style="background:#2563EB;"></span>Ink Navy</span>
+        <span class="card__desc">Narrow shoulder (20px). Classic royal blue — the colour of a Waterman or Pilot cartridge. Clean, confident.</span>
+      </span>
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       J2 — SLIM NIB  ·  BOTTLE GREEN
+       Shoulder width: 14px. Ink: forest/bottle green.
+  ====================================================== -->
+  <div class="card">
+    <div class="card__previews">
+
+      <div class="preview preview--light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 88" width="216" height="88">
+          <!-- Nib: very slim, shoulder 14px, centred x=20 -->
+          <path d="M 13,13 L 16,3 L 24,3 L 27,13 L 20,60 Z" fill="#14401E"/>
+          <line x1="20" y1="8"  x2="20" y2="54" stroke="#FAFAF7" stroke-width="1" stroke-linecap="round"/>
+          <circle cx="20" cy="23" r="2.5" fill="#FAFAF7"/>
+          <circle cx="20" cy="58" r="2.5" fill="#16A34A"/>
+          <line x1="20" y1="61" x2="20" y2="68" stroke="#16A34A" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="68" x2="208" y2="68" stroke="#16A34A" stroke-width="2"/>
+          <text y="62" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="20" fill="#14401E" letter-spacing="-0.5">
+            <tspan x="42">penn </tspan><tspan fill="#16A34A">&amp;</tspan><tspan fill="#14401E"> paper</tspan>
+          </text>
+          <text x="43" y="82" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="11" fill="#666666" letter-spacing="2">GAMES</text>
+        </svg>
+      </div>
+
+      <div class="preview preview--dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 88" width="216" height="88">
+          <path d="M 13,13 L 16,3 L 24,3 L 27,13 L 20,60 Z" fill="#D1FAE5"/>
+          <line x1="20" y1="8"  x2="20" y2="54" stroke="#14401E" stroke-width="1" stroke-linecap="round"/>
+          <circle cx="20" cy="23" r="2.5" fill="#14401E"/>
+          <circle cx="20" cy="58" r="2.5" fill="#34D399"/>
+          <line x1="20" y1="61" x2="20" y2="68" stroke="#34D399" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="68" x2="208" y2="68" stroke="#34D399" stroke-width="2"/>
+          <text y="62" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="20" fill="#FFFFFF" letter-spacing="-0.5">
+            <tspan x="42">penn </tspan><tspan fill="#34D399">&amp;</tspan><tspan fill="#FFFFFF"> paper</tspan>
+          </text>
+          <text x="43" y="82" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="11" fill="#AAAAAA" letter-spacing="2">GAMES</text>
+        </svg>
+      </div>
+
+    </div>
+    <div class="card__info">
+      <span class="card__letter" style="color:#16A34A;">J2</span>
+      <span>
+        <span class="card__name"><span class="swatch" style="background:#16A34A;"></span>Bottle Green</span>
+        <span class="card__desc">Slimmest nib (14px). A vintage British-ink green — Diamine Woodland Green territory. Elegant and a little unexpected.</span>
+      </span>
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       J3 — TAPERED NIB  ·  SEPIA AMBER
+       Shoulder width: 18px with slightly curved sides.
+       Ink: warm sepia/amber — manuscript, vintage writing.
+  ====================================================== -->
+  <div class="card">
+    <div class="card__previews">
+
+      <div class="preview preview--light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 88" width="216" height="88">
+          <!-- Nib: 18px shoulder with slightly curved sides for a softer look -->
+          <path d="M 11,13 L 15,3 L 25,3 L 29,13 Q 26,36 20,60 Q 14,36 11,13 Z" fill="#2C1A08"/>
+          <line x1="20" y1="8"  x2="20" y2="54" stroke="#FEF3C7" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="20" cy="24" r="2.8" fill="#FEF3C7"/>
+          <circle cx="20" cy="58" r="2.5" fill="#B45309"/>
+          <line x1="20" y1="61" x2="20" y2="68" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="68" x2="208" y2="68" stroke="#B45309" stroke-width="2"/>
+          <text y="62" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="20" fill="#2C1A08" letter-spacing="-0.5">
+            <tspan x="42">penn </tspan><tspan fill="#B45309">&amp;</tspan><tspan fill="#2C1A08"> paper</tspan>
+          </text>
+          <text x="43" y="82" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="11" fill="#666666" letter-spacing="2">GAMES</text>
+        </svg>
+      </div>
+
+      <div class="preview preview--dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 88" width="216" height="88">
+          <path d="M 11,13 L 15,3 L 25,3 L 29,13 Q 26,36 20,60 Q 14,36 11,13 Z" fill="#FDE68A"/>
+          <line x1="20" y1="8"  x2="20" y2="54" stroke="#2C1A08" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="20" cy="24" r="2.8" fill="#2C1A08"/>
+          <circle cx="20" cy="58" r="2.5" fill="#F59E0B"/>
+          <line x1="20" y1="61" x2="20" y2="68" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="68" x2="208" y2="68" stroke="#F59E0B" stroke-width="2"/>
+          <text y="62" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="20" fill="#FFFFFF" letter-spacing="-0.5">
+            <tspan x="42">penn </tspan><tspan fill="#F59E0B">&amp;</tspan><tspan fill="#FFFFFF"> paper</tspan>
+          </text>
+          <text x="43" y="82" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="11" fill="#AAAAAA" letter-spacing="2">GAMES</text>
+        </svg>
+      </div>
+
+    </div>
+    <div class="card__info">
+      <span class="card__letter" style="color:#B45309;">J3</span>
+      <span>
+        <span class="card__name"><span class="swatch" style="background:#B45309;"></span>Sepia Amber</span>
+        <span class="card__desc">18px shoulder with curved sides — softer than the angular options. Warm amber ink feels literary and handcrafted, like aged manuscript.</span>
+      </span>
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       J4 — ELONGATED NIB  ·  VIOLET INK
+       Shoulder width: 16px, extra tall body (65px).
+       Ink: Diamine Violet / Iroshizuku Yama-budo territory.
+  ====================================================== -->
+  <div class="card">
+    <div class="card__previews">
+
+      <div class="preview preview--light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 88" width="216" height="88">
+          <!-- Nib: 16px shoulder, elongated to y=64 -->
+          <path d="M 12,13 L 16,3 L 24,3 L 28,13 L 20,64 Z" fill="#1E1040"/>
+          <line x1="20" y1="8"  x2="20" y2="58" stroke="#EDE9FE" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="20" cy="24" r="2.8" fill="#EDE9FE"/>
+          <circle cx="20" cy="62" r="2.5" fill="#7C3AED"/>
+          <line x1="20" y1="65" x2="20" y2="70" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="70" x2="208" y2="70" stroke="#7C3AED" stroke-width="2"/>
+          <text y="64" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="20" fill="#1E1040" letter-spacing="-0.5">
+            <tspan x="42">penn </tspan><tspan fill="#7C3AED">&amp;</tspan><tspan fill="#1E1040"> paper</tspan>
+          </text>
+          <text x="43" y="83" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="11" fill="#666666" letter-spacing="2">GAMES</text>
+        </svg>
+      </div>
+
+      <div class="preview preview--dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 88" width="216" height="88">
+          <path d="M 12,13 L 16,3 L 24,3 L 28,13 L 20,64 Z" fill="#DDD6FE"/>
+          <line x1="20" y1="8"  x2="20" y2="58" stroke="#1E1040" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="20" cy="24" r="2.8" fill="#1E1040"/>
+          <circle cx="20" cy="62" r="2.5" fill="#A78BFA"/>
+          <line x1="20" y1="65" x2="20" y2="70" stroke="#A78BFA" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="70" x2="208" y2="70" stroke="#A78BFA" stroke-width="2"/>
+          <text y="64" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="20" fill="#FFFFFF" letter-spacing="-0.5">
+            <tspan x="42">penn </tspan><tspan fill="#A78BFA">&amp;</tspan><tspan fill="#FFFFFF"> paper</tspan>
+          </text>
+          <text x="43" y="83" font-family="Space Grotesk, sans-serif" font-weight="500" font-size="11" fill="#AAAAAA" letter-spacing="2">GAMES</text>
+        </svg>
+      </div>
+
+    </div>
+    <div class="card__info">
+      <span class="card__letter" style="color:#7C3AED;">J4</span>
+      <span>
+        <span class="card__name"><span class="swatch" style="background:#7C3AED;"></span>Violet Ink</span>
+        <span class="card__desc">Narrowest-but-tallest nib (16px × 64px) — the most pen-like proportion. Violet ink is a real fountain pen classic and reads creative without being aggressive.</span>
+      </span>
+    </div>
+  </div>
+
+
+</div><!-- /concepts -->
+</body>
+</html>

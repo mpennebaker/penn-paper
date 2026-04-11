@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background -->
+  <rect width="32" height="32" rx="7" fill="#14401E"/>
+  <!-- Simplified nib mark centred -->
+  <path d="M 11,9 L 13,4 L 19,4 L 21,9 L 16,26 Z" fill="#D1FAE5"/>
+  <!-- Slit -->
+  <line x1="16" y1="6" x2="16" y2="23" stroke="#14401E" stroke-width="0.9" stroke-linecap="round"/>
+  <!-- Vent hole -->
+  <circle cx="16" cy="13" r="1.8" fill="#14401E"/>
+  <!-- Ink dot -->
+  <circle cx="16" cy="25" r="1.5" fill="#16A34A"/>
+</svg>
