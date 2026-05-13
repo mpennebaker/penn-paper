@@ -224,20 +224,20 @@ img {
 }
 
 /* ==========================================
-   GAMES SECTION
+   PROJECTS SECTION
    ========================================== */
-.games {
+.projects {
   background: var(--bg);
 }
 
-.games__grid {
+.projects__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
 @media (max-width: 680px) {
-  .games__grid {
+  .projects__grid {
     grid-template-columns: 1fr;
   }
 }
@@ -266,46 +266,30 @@ img {
   overflow: hidden;
 }
 
-/* Pixel Puzzle: dark grid with subtle green lines */
-.game-card__art--pixel {
-  background-color: #15152a;
-  background-image:
-    linear-gradient(rgba(22, 163, 74, 0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(22, 163, 74, 0.18) 1px, transparent 1px),
-    linear-gradient(rgba(100, 100, 180, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(100, 100, 180, 0.08) 1px, transparent 1px);
-  background-size: 40px 40px, 40px 40px, 8px 8px, 8px 8px;
+/* WantzIt: real screenshot */
+.game-card__art--wantzit {
+  background: #eef7f1;
 }
 
-/* Small highlight squares scattered in the pixel grid */
-.game-card__art--pixel::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(ellipse 80% 60% at 30% 60%, rgba(22, 163, 74, 0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 70% 30%, rgba(100, 120, 255, 0.1) 0%, transparent 60%);
+.game-card__art--wantzit img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
 }
 
-/* Pinball Survivor: dark with glowing orb */
-.game-card__art--pinball {
-  background-color: #0c0c1a;
-  background-image:
-    radial-gradient(ellipse 70% 70% at 50% 50%, rgba(22, 163, 74, 0.3) 0%, rgba(22, 163, 74, 0.08) 45%, transparent 70%),
-    radial-gradient(circle at 50% 50%, rgba(255, 210, 120, 0.08) 0%, transparent 50%);
+/* DropWords: real screenshot */
+.game-card__art--dropwords {
+  background: #111827;
 }
 
-.game-card__art--pinball::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 200, 80, 0.55) 0%, rgba(22, 163, 74, 0.4) 50%, transparent 80%);
-  box-shadow: 0 0 32px 12px rgba(22, 163, 74, 0.25);
+.game-card__art--dropwords img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
 }
 
 /* ---- Card body ---- */
@@ -333,6 +317,40 @@ img {
   color: var(--text-secondary);
   line-height: 1.65;
   margin-bottom: 18px;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 18px;
+  transition: gap 0.18s, color 0.18s;
+}
+
+.card-link:hover {
+  gap: 10px;
+  color: var(--accent-dark);
+}
+
+.card-credit {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 10px;
+}
+
+.card-credit a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.18s;
+}
+
+.card-credit a:hover {
+  color: var(--text-primary);
 }
 
 /* ==========================================
